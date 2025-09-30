@@ -1,0 +1,170 @@
+body{
+    margin: 5px;;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom,rgb(46, 7, 7), black);
+    font-family: cursive;
+    overflow: hidden;
+
+}
+
+h1{
+    text-align: center;
+    color: orangered;
+    font-size: 5rem;
+    text-shadow:
+    0 0 5px orange,
+    0 0 10px yellow,
+    0 0 20px green,
+    0 0 40px red,
+    0 0 80px purple; 
+
+}
+
+.ghost{
+    position: fixed;
+    font-size: 10rem;
+    position: fixed;
+    top: 10%;
+    z-index: 99;
+    font-size: 2.5em;
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.pumpkin{
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    font-size: 2.5em;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.candy{
+    position: none;      
+    font-size: 0rem;
+    opacity: 0.6;
+    pointer-events: none;
+    animation: fall, spin;
+    animation-timing-function: linear, linear;
+    animation-iteration-count: infinite, infinite;
+}
+
+@keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(110vh) rotate(360deg);
+      opacity: 0.7;
+    }
+  } 
+
+  @keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .pumpkin:nth-child(1) {
+    left: 10%;
+    right: 40%;
+    animation-duration: 15s;
+  }
+  .pumpkin:nth-child(2) {
+    left: 20%;
+    animation-duration: 8s;
+    font-size: 2em;
+  }
+  .pumpkin:nth-child(3) {
+    left: 30%;
+    animation-duration: 3s;
+  }
+  .pumpkin:nth-child(4) {
+    nav-down: 40%;
+    animation-duration: 5s;
+  }
+  .pumpkin:nth-child(5) {
+    left: 50%;
+    animation-duration: 7s;
+    font-size: 3.2em;
+  }
+  .pumpkin:nth-child(6) {
+    left: 60%;
+    animation-duration: 8s;
+  }
+  .pumpkin:nth-child(7) {
+    left: 70%;
+    animation-duration: 9s;
+  }
+  .pumpkin:nth-child(8) {
+    left: 80%;
+    animation-duration: 10s;
+  }
+  .pumpkin:nth-child(9) {
+    left: 90%;
+    animation-duration: 15s;
+    font-size: 1.8em;
+  }
+  .pumpkin:nth-child(10) {
+    left: 80%;
+    animation-duration: 5s;
+    font-size: 1.8em;
+  }
+  .pumpkin:nth-child(11) {
+    left: 70%;
+    animation-duration: 12s;
+    font-size: 1.8em;
+  }
+  .pumpkin:nth-child(12) {
+    left: 60%;
+    animation-duration: 11s;
+    font-size: 2.8em;
+  }
+  .pumpkin:nth-child(14) {
+    right: 90%;
+    animation-duration: 5s;
+    font-size: 2.8em;
+  }
+  .pumpkin:nth-child(15) {
+    left: 20%;
+    animation-duration: 8s;
+    font-size: 1.8em;
+  }
+
+
+  .candy:nth-child(1) {
+    right: 50%;
+    font-size: 3.5em;
+    animation-duration: 4s;
+  }
+  .candy:nth-child(2) {
+    right: 45%;
+    animation-duration: 5s;
+    font-size: 5.5em;
+  }
+  .candy:nth-child(3) {
+    right: 50%;
+    animation-duration: 5s;
+  }
+  .candy:nth-child(4) {
+    right: 40%;
+    animation-duration: 5s;
+    font-size: 2.5em;
+  }
+  .candy:nth-child(5) {
+    right: 50%;
+    animation-duration: 4s;
+    font-size: 2.2em;
+  }
+
+  .ghost{
+    right: 40%;
+    animation-duration: 8s;
+    font-size: 10em;
+  }
