@@ -1,6 +1,6 @@
 body{
   margin: 10px;
-  padding: 2;
+  padding: 2px;
   height: 80vh;
   background: linear-gradient(to bottom, rgb(46, 7, 7), black);
   font-family: cursive;
@@ -88,3 +88,53 @@ h1{
 .candy:nth-child(5) { left: 70%; font-size: 2.2rem; animation-duration: 4s, 2s; }
 .candy:nth-child(6) { right: 35%; font-size: 3.0rem; animation-duration: 6s, 3s; }
 .candy:nth-child(7) { right: 65%; font-size: 2.4rem; animation-duration: 7s, 3s; }
+
+/* makes website look good for most screen size*/
+h1 { font-size: clamp(2rem, 8vw, 5rem); }
+.ghost { font-size: clamp(4rem, 12vw, 10rem); }
+
+/* smartphone */
+@media (max-width: 575px) {
+  h1 {
+    top: 6%;
+    right: 50%;
+    transform: translateX(50%);
+    text-align: center;
+  }
+  .ghost {
+    top: 45%;
+    right: 50%;
+    transform: translateX(50%);
+    animation-duration: 7s;
+  }
+  .pumpkin {
+    font-size: 1.6em;
+    animation-duration: 10s;
+  }
+  .candy {
+    font-size: 1.6rem;
+    animation-duration: 7s;
+  }
+}
+
+/* tablet */
+@media (min-width: 576px) and (max-width: 991px) {
+  h1 {
+    top: 8%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .ghost {
+    right: 50%;
+    transform: translateX(50%);
+    animation-duration: 6s;
+  }
+  .pumpkin { font-size: 2.1em; }
+  .candy   { font-size: 2rem; }
+}
+
+/* desktop */
+@media (min-width: 992px) {
+  .pumpkin { font-size: 2.6em; }
+  .candy   { font-size: 2.2rem; }
+}
